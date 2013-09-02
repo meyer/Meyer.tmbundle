@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+
+# Yoinked from https://gist.github.com/RCanine/1603646
+
+input = STDIN.read
+match = /^\s*rgba?\(\s*(\d{1,3}),\s*(\d{1,3}),\s*(\d{1,3})(?:,[\d\.]+)?\s*\)(\s*;?)/.match(input)
+if !match.nil? # RGB -&gt; Hex
+  res = "#"
+  short_safe = true
+  matches = [match[1], match[2], match[3]].map do |m|
+    h = m.to_i.to_s(16)
+    if h.length == 1
+      "0#{h}"
+    else
+      short_safe = short_safe &amp;&amp; h[0] == h[1]
+      h
+    end
+  end
+  if short_safe
+    matches = matches.map do |m|
+      m.split("")[0]
+    end
+  end
+  res &lt;&lt; matches.join("")
+  res &lt;&lt; match[4]
+  res.upcase!
+else
+  match = /^#([A-F0-9]{1,2})([A-F0-9]{1,2})([A-F0-9]{1,2})(\s*;?)$/i.match(input)
+
+  if match.nil? # Bad input
+    res = input
+  else # Hex -&gt; RGB
+    res = "rgb("
+    res &lt;&lt; [match[1], match[2], match[3]].map do |m|
+      m &lt;&lt; m if m.length == 1
+      m.hex.to_s
+    end.join(",")
+    res &lt;&lt; ")"
+    res &lt;&lt; match[4]
+  end
+
+end
+print res</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>name</key>
+	<string>Toggle Hex/RGB</string>
+	<key>outputCaret</key>
+	<string>selectOutput</string>
+	<key>outputLocation</key>
+	<string>replaceInput</string>
+	<key>scope</key>
+	<string>source.css</string>
+	<key>uuid</key>
+	<string>286F9BAC-8880-4AB9-9548-F051B9E23FAE</string>
+</dict>
+</plist>
