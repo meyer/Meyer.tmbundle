@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby20
+print `uuidgen`.chomp
+</string>
+	<key>input</key>
+	<string>none</string>
+	<key>name</key>
+	<string>Generate UUID</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>replaceInput</string>
+	<key>scope</key>
+	<string>source, text</string>
+	<key>tabTrigger</key>
+	<string>uuid</string>
+	<key>uuid</key>
+	<string>A7C8648C-3E15-4D98-82CD-71B8DFA21265</string>
+</dict>
+</plist>
