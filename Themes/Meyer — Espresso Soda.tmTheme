@@ -1,9 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>@meyer — Espresso Soda</string>
+	<string>Espresso Soda</string>
+	<key>author</key>
+	<string>@buymeasoda</string>
+	<key>comment</key>
+	<string>https://github.com/buymeasoda/soda-theme</string>
+	<key>semanticClass</key>
+	<string>theme.meyer.espresso_soda</string>
+	<key>colorSpaceName</key>
+	<string>sRGB</string>
+	<!--
+	<key>gutterSettings</key>
+	<dict>
+		<key>background</key>
+		<string>#f5f5f5</string>
+		<key>divider</key>
+		<string>#9F9F9F</string>
+		<key>foreground</key>
+		<string>#a0a0a0</string>
+		<key>icons</key>
+		<string>#666666</string>
+		<key>iconsHover</key>
+		<string>#666666</string>
+		<key>iconsPressed</key>
+		<string>#333333</string>
+		<key>selectionBackground</key>
+		<string>#ffffff</string>
+		<key>selectionBorder</key>
+		<string>#D8D8D8</string>
+		<key>selectionForeground</key>
+		<string>#4b4b4b</string>
+		<key>selectionIcons</key>
+		<string>#2D85C5</string>
+		<key>selectionIconsHover</key>
+		<string>#34D58E</string>
+		<key>selectionIconsPressed</key>
+		<string>#EA7F2A</string>
+		<key>fontStyle</key>
+		<string>italic</string>
+	</dict>
+	-->
 	<key>settings</key>
 	<array>
 		<dict>
@@ -13,8 +52,14 @@
 				<string>#FFFFFF</string>
 				<key>caret</key>
 				<string>#000000</string>
+				<key>findHighlight</key>
+				<string>#FFE792</string>
+				<key>findHighlightForeground</key>
+				<string>#000000</string>
 				<key>foreground</key>
 				<string>#000000</string>
+				<key>inactiveSelection</key>
+				<string>#EDEDED</string>
 				<key>invisibles</key>
 				<string>#E0E0E0</string>
 				<key>lineHighlight</key>
@@ -23,12 +68,6 @@
 				<string>#C2E8FF</string>
 				<key>selectionBorder</key>
 				<string>#AACBDF</string>
-				<key>inactiveSelection</key>
-				<string>#EDEDED</string>
-				<key>findHighlight</key>
-				<string>#FFE792</string>
-				<key>findHighlightForeground</key>
-				<string>#000000</string>
 			</dict>
 		</dict>
 		<dict>
